@@ -10,24 +10,33 @@ namespace Operator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("연산자 목록을 선택하세요 : ");
-            Console.WriteLine("1. 산술 연산자");
-            Console.WriteLine("2. 비교 연산자");
-            Console.WriteLine("3. 논리 연산자");
-            Console.WriteLine("4. 비트 연산자");
-            Console.WriteLine("5. 산술 연산자");
-            Console.WriteLine("번호를 입력하세요 (1-5):");
-
-            string input = Console.ReadLine();
-
-            if (ValidateInput(input, 1, 5, out int selectedOption))
+            while (true)
             {
-                Console.WriteLine($"너가 선택한 옵션은 {selectedOption}.");
-                // Call appropriate method based on selectedOption
-            }
-            else
-            {
-                Console.WriteLine("잘못된 입력입니다. 1~5 사이의 번호를 입력하세요.");
+                Console.WriteLine("\n연산자 목록을 선택하세요:");
+                Console.WriteLine("1. 산술 연산자");
+                Console.WriteLine("2. 비교 연산자");
+                Console.WriteLine("3. 논리 연산자");
+                Console.WriteLine("4. 비트 연산자");
+                Console.WriteLine("5. 할당 연산자");
+                Console.WriteLine("0. 종료");
+                Console.Write("번호를 입력하세요 (0-5): ");
+
+                string input = Console.ReadLine();
+
+                if (ValidateInput(input, 0, 5, out int selectedOption))
+                {
+                    if (selectedOption == 0)
+                    {
+                        Console.WriteLine("프로그램을 종료합니다.");
+                        break;
+                    }
+
+                    ExecuteSelectedOption(selectedOption);
+                }
+                else
+                {
+                    Console.WriteLine("잘못된 입력입니다. 0~5 사이의 번호를 입력하세요.");
+                }
             }
         }
 
@@ -40,7 +49,33 @@ namespace Operator
                     return true;
                 }
             }
+            validatedNumber = 0;
             return false;
+        }
+
+        static void ExecuteSelectedOption(int option)
+        {
+            switch (option)
+            {
+                case 1:
+                    ExplainArithmeticOperators();
+                    break;
+                case 2:
+                    ExplainComparisonOperators();
+                    break;
+                case 3:
+                    ExplainLogicalOperators();
+                    break;
+                case 4:
+                    ExplainBitwiseOperators();
+                    break;
+                case 5:
+                    ExplainAssignmentOperators();
+                    break;
+                default:
+                    Console.WriteLine("잘못된 선택입니다.");
+                    break;
+            }
         }
 
 
