@@ -42,5 +42,13 @@ namespace Operator
             }
             return false;
         }
+
+        static void ExplainLogicalOperators()
+        {
+            Console.WriteLine("논리 연산자 : ");
+            Console.WriteLine("&& : 논리곱 (AND 조건), ex) true && false is false");
+            Console.WriteLine("|| : 논리합 (OR 조건), ex) true || false is true");
+            Console.WriteLine("!  : 논리 부정 (NOT 조건), ex) !true is false");
+        }
     }
 }
