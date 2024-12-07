@@ -61,5 +61,15 @@ namespace Operator
             Console.WriteLine("<< : 왼쪽 시프트, ex) 5 << 1 = 10");
             Console.WriteLine(">> : 오른쪽 시프트, ex) 5 >> 1 = 2");
         }
+
+        static void ExplainAssignmentOperators()
+        {
+            Console.WriteLine("할당 연산자 : ");
+            Console.WriteLine("=  : 단순 할당, ex) x = 5 assigns 5 to x");
+            Console.WriteLine("+= : 더하기 할당, ex) x += 3 is equivalent to x = x + 3");
+            Console.WriteLine("-= : 빼기 할당, ex) x -= 2 is equivalent to x = x - 2");
+            Console.WriteLine("*= : 곱하기 할당, ex) x *= 4 is equivalent to x = x * 4");
+            Console.WriteLine("/= : 나누기 할당, ex) x /= 2 is equivalent to x = x / 2");
+        }
     }
 }
