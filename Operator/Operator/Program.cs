@@ -50,5 +50,16 @@ namespace Operator
             Console.WriteLine("|| : 논리합 (OR 조건), ex) true || false is true");
             Console.WriteLine("!  : 논리 부정 (NOT 조건), ex) !true is false");
         }
+
+        static void ExplainBitwiseOperators()
+        {
+            Console.WriteLine("비트 연산자 : ");
+            Console.WriteLine("&  : 논리곱 (AND), ex) 5 & 3 = 1");
+            Console.WriteLine("|  : 논리합 (OR), ex) 5 | 3 = 7");
+            Console.WriteLine("^  : 배타적 논리합 (XOR), ex) 5 ^ 3 = 6");
+            Console.WriteLine("~  : NOT, ex) ~5 = -6");
+            Console.WriteLine("<< : 왼쪽 시프트, ex) 5 << 1 = 10");
+            Console.WriteLine(">> : 오른쪽 시프트, ex) 5 >> 1 = 2");
+        }
     }
 }
