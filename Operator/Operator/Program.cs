@@ -62,6 +62,17 @@ namespace Operator
             Console.WriteLine("% : 나머지, ex) 5 % 3 = 2");
         }
 
+        static void ExplainComparisonOperators()
+        {
+            Console.WriteLine("Comparison Operators:");
+            Console.WriteLine("== : 같은지, ex) 5 == 5 is true");
+            Console.WriteLine("!= : 다른지, ex) 5 != 3 is true");
+            Console.WriteLine("<  : 작은지, ex) 3 < 5 is true");
+            Console.WriteLine(">  : 큰지, ex) 5 > 3 is true");
+            Console.WriteLine("<= : 작거나 같은지, ex) 5 <= 5 is true");
+            Console.WriteLine(">= : 크거나 같은지, ex) 5 >= 3 is true");
+        }
+
         static void ExplainBitwiseOperators()
         {
             Console.WriteLine("비트 연산자 : ");
