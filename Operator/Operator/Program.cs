@@ -93,5 +93,36 @@ namespace Operator
             Console.WriteLine("*= : 곱하기 할당, ex) x *= 4 is equivalent to x = x * 4");
             Console.WriteLine("/= : 나누기 할당, ex) x /= 2 is equivalent to x = x / 2");
         }
+
+        static void ExecuteArithmeticOperators()
+        {
+            int num1 = GetSafeInteger("첫 번째 숫자를 입력하세요: ");
+            int num2 = GetSafeInteger("두 번째 숫자를 입력하세요: ");
+
+            Console.WriteLine("\n산술 연산 결과:");
+            Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+            Console.WriteLine($"{num1} - {num2} = {num1 - num2}");
+            Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+            Console.WriteLine($"{num1} / {num2} = {num1 / num2}");
+            Console.WriteLine($"{num1} % {num2} = {num1 % num2}");
+        }
+
+        static int GetSafeInteger(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine();
+
+                if (int.TryParse(input, out int number))
+                {
+                    return number;
+                }
+                else
+                {
+                    Console.WriteLine("잘못된 입력입니다. 숫자를 입력하세요.");
+                }
+            }
+        }
     }
 }
