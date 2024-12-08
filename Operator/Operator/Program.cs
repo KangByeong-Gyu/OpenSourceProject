@@ -180,6 +180,24 @@ namespace Operator
             Console.WriteLine($"!{val1}: {!val1}");
         }
 
+        static void ExecuteAssignmentOperators()
+        {
+            int num = GetSafeInteger("숫자를 입력하세요: ");
+
+            Console.WriteLine("\n할당 연산 결과:");
+            Console.WriteLine($"초기 값: {num}");
+            num += 5;
+            Console.WriteLine($"num += 5: {num}");
+            num -= 2;
+            Console.WriteLine($"num -= 2: {num}");
+            num *= 3;
+            Console.WriteLine($"num *= 3: {num}");
+            num /= 2;
+            Console.WriteLine($"num /= 2: {num}");
+            num %= 2;
+            Console.WriteLine($"num %= 2: {num}");
+        }
+
         static int GetSafeInteger(string prompt)
         {
             while (true)
