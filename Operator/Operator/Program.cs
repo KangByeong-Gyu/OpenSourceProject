@@ -142,6 +142,20 @@ namespace Operator
             Console.WriteLine($"{num1} % {num2} = {num1 % num2}");
         }
 
+        static void ExecuteBitwiseOperators()
+        {
+            int num1 = GetSafeInteger("첫 번째 숫자를 입력하세요: ");
+            int num2 = GetSafeInteger("두 번째 숫자를 입력하세요: ");
+
+            Console.WriteLine("\n비트 연산 결과:");
+            Console.WriteLine($"{num1} & {num2}: {num1 & num2}");
+            Console.WriteLine($"{num1} | {num2}: {num1 | num2}");
+            Console.WriteLine($"{num1} ^ {num2}: {num1 ^ num2}");
+            Console.WriteLine($"~{num1}: {~num1}");
+            Console.WriteLine($"{num1} << 1: {num1 << 1}");
+            Console.WriteLine($"{num1} >> 1: {num1 >> 1}");
+        }
+
         static int GetSafeInteger(string prompt)
         {
             while (true)
