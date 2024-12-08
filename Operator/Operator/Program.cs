@@ -156,6 +156,17 @@ namespace Operator
             Console.WriteLine($"{num1} >= {num2}: {num1 >= num2}");
         }
 
+        static void ExecuteLogicalOperators()
+        {
+            bool val1 = GetSafeBoolean("첫 번째 논리값을 입력하세요 (true/false): ");
+            bool val2 = GetSafeBoolean("두 번째 논리값을 입력하세요 (true/false): ");
+
+            Console.WriteLine("\n논리 연산 결과:");
+            Console.WriteLine($"{val1} && {val2}: {val1 && val2}");
+            Console.WriteLine($"{val1} || {val2}: {val1 || val2}");
+            Console.WriteLine($"!{val1}: {!val1}");
+        }
+
         static int GetSafeInteger(string prompt)
         {
             while (true)
@@ -170,6 +181,24 @@ namespace Operator
                 else
                 {
                     Console.WriteLine("잘못된 입력입니다. 숫자를 입력하세요.");
+                }
+            }
+        }
+
+        static bool GetSafeBoolean(string prompt)
+        {
+            while (true)
+            {
+                Console.Write(prompt);
+                string input = Console.ReadLine();
+
+                if (bool.TryParse(input, out bool result))
+                {
+                    return result;
+                }
+                else
+                {
+                    Console.WriteLine("잘못된 입력입니다. true 또는 false를 입력하세요.");
                 }
             }
         }
