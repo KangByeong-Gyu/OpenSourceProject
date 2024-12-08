@@ -59,18 +59,23 @@ namespace Operator
             {
                 case 1:
                     ExplainArithmeticOperators();
+                    ExecuteArithmeticOperators();
                     break;
                 case 2:
                     ExplainComparisonOperators();
+                    ExecuteComparisonOperators();
                     break;
                 case 3:
                     ExplainLogicalOperators();
+                    ExecuteLogicalOperators();
                     break;
                 case 4:
                     ExplainBitwiseOperators();
+                    ExecuteBitwiseOperators();
                     break;
                 case 5:
                     ExplainAssignmentOperators();
+                    ExecuteAssignmentOperators();
                     break;
                 default:
                     Console.WriteLine("잘못된 선택입니다.");
